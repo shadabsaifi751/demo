@@ -4,7 +4,7 @@ import styles from "./BusinessInfoSection.module.scss";
 import Image from "next/image";
 import Flag from "@/assets/US.png";
 import Building from "@/assets/building.png";
-import AddIcon from "@/assets/add.svg";
+import AddIcon from "@/assets/Add.svg";
 
 const BusinessInfoSection = () => {
   const [activeStep, setActiveStep] = useState(1);
