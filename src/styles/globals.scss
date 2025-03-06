@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+/* @import "tailwindcss"; */
+
+:root {
+  --color: #000000b3;
+  --black: #000000;
+  --primary: #0084FF;
+  --secondary: #D1D1D1;
+  --white: #ffffff;
+  --background: #ffffff;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color: #000000b3;
+    --background: #ededed;
+  }
+} */
+/* font-family: "Baloo 2", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  accent-color: var(--primary);
+}
+body {
+  background: var(--background);
+  color: var(--color);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.container-fluid {
+  max-width: 1456px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+.header {
+  padding: 15px 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  .main-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .logo {
+      font-family: "Baloo 2", sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      line-height: 26px;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  .group-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    button {
+      border: none;
+      background: transparent;
+      line-height: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+footer {
+  .foot-nav {
+    padding: 12px 0;
+    background-color: #e9f3ff;
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 35px;
+      .nav-item {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--black);
+      }
+    }
+  }
+  .foot-nav-bottom {
+    background-color: #181f31;
+    .foot-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .title {
+        padding: 10px 0;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: var(--background);
+      }
+    }
+  }
+}
+

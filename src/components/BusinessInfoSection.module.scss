@@ -1,0 +1,440 @@
+.businessInfoSection {
+  margin-top: 50px;
+  .business_layout {
+    display: grid;
+    grid-template-columns: 263px 1fr;
+    gap: 78px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+    // components/Sidebar.module.scss
+    .sidebar {
+      @media (max-width: 768px) {
+        display: none;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 16px;
+      }
+
+      .steps {
+        padding: 15px 22px;
+        background: #ffffff;
+        list-style: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 25px 0 rgba(0, 0, 0, 0.1);
+        display: grid;
+        gap: 25px;
+
+        .step {
+          display: grid;
+          gap: 15px;
+          grid-template-columns: 30px 1fr;
+
+          .stepNumber {
+            width: 30px;
+            height: 30px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 700;
+            &.active {
+              background: var(--primary);
+              color: var(--white);
+            }
+          }
+
+          .stepInfo {
+            h3 {
+              font-size: 16px;
+              line-height: 22px;
+              font-weight: 600;
+              color: #000000bf;
+              margin-bottom: 5px;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 20px;
+              font-weight: 400;
+              color: #00000099;
+            }
+          }
+
+          &.active {
+            .stepNumber {
+              background: #007bff;
+            }
+
+            .stepInfo {
+              h3 {
+                color: #007bff;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .main_panel {
+      .title {
+        color: var(--primary);
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        margin-top: 36px;
+        font-family: "Inter", sans-serif;
+      }
+
+      .sec_title {
+        color: #000000cc;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        span {
+          color: #e82327;
+        }
+      }
+      .border_bottom {
+        height: 5px;
+        border-radius: 5px;
+        background-color: var(--primary);
+        width: 100px;
+        display: block;
+        margin-bottom: 18px;
+      }
+
+      .form_wrap {
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 25px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 50px;
+
+        // input[type="text"],
+        // input[type="tel"],
+
+        select {
+          width: 100%;
+          padding: 14px 16px;
+          margin-bottom: 25px;
+          border: 1px solid #00000033;
+          border-radius: 6px;
+          box-sizing: border-box;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 600;
+          font-family: "Inter", sans-serif;
+          color: #00000099;
+          &:focus {
+            border-color: var(--primary);
+            outline: none;
+          }
+        }
+        .form_input {
+          position: relative;
+          margin-bottom: 25px;
+
+          input,
+          select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #00000033;
+            height: 48px;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            font-family: "Inter", sans-serif;
+            outline: none;
+            background: white;
+            appearance: none; // Removes default styles for select dropdowns
+
+            &::placeholder {
+              opacity: 0;
+            }
+
+            &:focus {
+              border: 2px solid var(--primary);
+            }
+
+            &:focus + label,
+            &:not(:placeholder-shown) + label,
+            select:focus + label,
+            select:not([value=""]) + label {
+              top: 0;
+              font-size: 14px;
+              color: var(--primary);
+              background: #fff;
+              padding: 2px;
+            }
+          }
+
+          select {
+            cursor: pointer;
+          }
+
+          label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            color: #00000099;
+            font-family: "Inter", sans-serif;
+            transition: 0.3s;
+            pointer-events: none;
+          }
+        }
+
+        .addressFields {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          gap: 15px;
+
+          input,
+          select {
+            flex: 1;
+          }
+
+          .country_flag_wrap {
+            position: relative;
+            margin-bottom: 20px;
+            .flag {
+              position: absolute;
+              top: 47%;
+              transform: translateY(-50%);
+              left: 15px;
+            }
+            select {
+              padding-left: 45px;
+              margin-bottom: 5px;
+            }
+          }
+        }
+
+        .checkboxLabel {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: 500;
+          cursor: pointer;
+          .label_input {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+
+      .mapSection {
+        margin-bottom: 50px;
+
+        .description {
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: 500;
+          color: var(--black);
+          margin-bottom: 10px;
+        }
+
+        .findLocation {
+          padding: 10px 20px;
+          background: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        .mapPlaceholder {
+          margin-top: 10px;
+          position: relative;
+
+          .find_device {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: var(--primary);
+            color: var(--white);
+            font-family: 14px;
+            line-height: 22px;
+            font-weight: 600;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: "Inter", sans-serif;
+          }
+          .map {
+            border: none;
+            width: 100%;
+            border-radius: 4px;
+          }
+        }
+      }
+
+      .form_wrap {
+        .phoneInput {
+          display: flex;
+          gap: 35px;
+          align-items: center;
+
+          .select_wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            padding-left: 15px;
+
+            .country_flag {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+            }
+            .country_code {
+              width: 38px;
+              padding: 6px 16px 6px 0;
+              font-size: 18px;
+              line-height: 22px;
+              border-radius: 0;
+              font-weight: 600;
+              border: none;
+              appearance: none;
+              margin: 0;
+              border-right: 1px solid rgba(0, 0, 0, 0.2);
+              &:focus {
+                outline: none;
+              }
+            }
+            select,
+            input[type="tel"] {
+              flex: 1;
+              margin-bottom: 0;
+              border: none;
+              width: 100%;
+              padding: 14px 16px;
+              border-radius: 6px;
+              box-sizing: border-box;
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: 600;
+              font-family: "Inter", sans-serif;
+              color: #00000099;
+              &:focus {
+                border-color: var(--primary);
+                outline: none;
+              }
+            }
+          }
+
+          .verifyButton {
+            padding: 13px 40px;
+            background: #cdcdcd;
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            border: 1px solid #00000033;
+            border-radius: 6px;
+            cursor: pointer;
+
+            &.active {
+              background-color: var(--primary);
+              color: var(--white);
+            }
+          }
+          .addIcon {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+
+        .logo_business {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 58px;
+          align-items: flex-end;
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #0000008c;
+          }
+
+          .browseButton,
+          .uploadButton {
+            padding: 13px 40px;
+            background: #cdcdcd;
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            border: 1px solid #00000033;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+
+            &.active {
+              background-color: var(--primary);
+              color: var(--white);
+            }
+          }
+
+          .browseButton {
+            margin-right: 23px;
+          }
+
+          .logoNote {
+            font-size: 12px;
+            font-family: "Source Sans 3", sans-serif;
+            color: #0000008c;
+            margin-top: 10px;
+          }
+
+          .logoPreview {
+            // margin-top: 10px;
+            // img {
+            //   width: 200px;
+            //   height: 200px;
+            // }
+          }
+        }
+      }
+
+      .nextButton {
+        padding: 13px 40px;
+        background: #1c273b;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 99px;
+        margin-bottom: 100px;
+        margin-left: auto;
+        display: block;
+        font-family: "Source Sans 3", sans-serif;
+      }
+    }
+  }
+}
