@@ -2,7 +2,7 @@
   margin-top: 50px;
   .business_layout {
     display: grid;
-    grid-template-columns: 263px 1fr;
+    grid-template-columns: 301px 1fr;
     gap: 78px;
 
     @media (max-width: 768px) {
@@ -15,17 +15,19 @@
       }
       .title {
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 28px;
-        color: rgba(0, 0, 0, 0.7);
-        margin-bottom: 16px;
+        color: #000000b2;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #00000099;
       }
 
       .steps {
-        padding: 15px 22px;
+        padding: 10px 20px 20px 20px;
         background: #ffffff;
         list-style: none;
-        border-radius: 10px;
+        border-radius: 15px;
         box-shadow: 1px 1px 25px 0 rgba(0, 0, 0, 0.1);
         display: grid;
         gap: 25px;
@@ -67,6 +69,7 @@
               line-height: 20px;
               font-weight: 400;
               color: #00000099;
+              width: 80%;
             }
           }
 
@@ -88,39 +91,40 @@
     .main_panel {
       .title {
         color: var(--primary);
-        font-size: 34px;
+        font-size: 30px;
         font-weight: 700;
         margin-bottom: 40px;
-        margin-top: 36px;
+        margin-top: 13px;
         font-family: "Inter", sans-serif;
       }
 
-      .sec_title {
-        color: #000000cc;
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        span {
-          color: #e82327;
-        }
-      }
-      .border_bottom {
-        height: 5px;
-        border-radius: 5px;
-        background-color: var(--primary);
-        width: 100px;
-        display: block;
-        margin-bottom: 18px;
-      }
-
       .form_wrap {
-        padding: 50px;
-        border-radius: 10px;
+        padding: 30px;
+        border-radius: 15px;
         box-shadow: 1px 1px 25px 0 rgba(0, 0, 0, 0.1);
-        margin-bottom: 50px;
+        margin-bottom: 40px;
 
         // input[type="text"],
         // input[type="tel"],
+
+        .sec_title {
+          color: #000000cc;
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          line-height: 28px;
+          span {
+            color: #e82327;
+          }
+        }
+        .border_bottom {
+          height: 5px;
+          border-radius: 5px;
+          background-color: var(--primary);
+          width: 100px;
+          display: block;
+          margin-bottom: 30px;
+        }
 
         select {
           width: 100%;
@@ -141,7 +145,7 @@
         }
         .form_input {
           position: relative;
-          margin-bottom: 25px;
+          // margin-bottom: 25px;
 
           input,
           select {
@@ -211,7 +215,7 @@
 
           .country_flag_wrap {
             position: relative;
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
             .flag {
               position: absolute;
               top: 47%;
@@ -220,7 +224,7 @@
             }
             select {
               padding-left: 45px;
-              margin-bottom: 5px;
+              margin-bottom: 0px;
             }
           }
         }
@@ -232,6 +236,7 @@
           font-size: 14px;
           line-height: 22px;
           font-weight: 500;
+          margin-bottom: 17px;
           cursor: pointer;
           .label_input {
             height: 20px;
@@ -241,14 +246,14 @@
       }
 
       .mapSection {
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
 
         .description {
           font-size: 14px;
           line-height: 22px;
-          font-weight: 500;
-          color: var(--black);
-          margin-bottom: 10px;
+          font-weight: 400;
+          color: #00000099;
+          margin-bottom: 20px;
         }
 
         .findLocation {
@@ -261,66 +266,125 @@
         }
 
         .mapPlaceholder {
-          margin-top: 10px;
+          margin-bottom: 30px;
           position: relative;
+          border: 1px solid #0000001a;
+          border-radius: 15px;
+          overflow: hidden;
 
+          .input_search {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            border: 1px solid #0000004d;
+            width: 90%;
+            .icon {
+              position: absolute;
+              top: 50%;
+              left: 20px;
+              transform: translateY(-50%);
+            }
+
+            .input_control {
+              padding: 12px 20px 12px 63px;
+              border: none;
+              width: 100%;
+              border-radius: 10px;
+              font-size: 18px;
+              font-weight: 400;
+              outline: none;
+            }
+          }
           .find_device {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            bottom: 132px;
+            left: 50%;
+            transform: translateX(-50%);
             border: none;
-            border-radius: 4px;
-            background-color: var(--primary);
-            color: var(--white);
+            border-radius: 25px;
+            background-color: var(--white);
+            border: 1px solid var(--primary);
+            color: var(--primary);
             font-family: 14px;
-            line-height: 22px;
-            font-weight: 600;
-            padding: 5px 10px;
+            // line-height: 22px;
+            font-weight: 500;
+            padding: 10px 15px;
             cursor: pointer;
             font-family: "Inter", sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
           }
           .map {
-            border: none;
             width: 100%;
-            border-radius: 4px;
+            // border-radius: 15px 0 0 15px;
+            border: 0;
           }
+
+          .location_info {
+            padding: 30px 50px;
+            display: grid;
+            gap: 10px;
+
+            .country {
+              color: var(--black);
+              font-family: 20px;
+              font-weight: 600;
+            }
+            .state {
+              color: #00000099;
+              font-family: 14px;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .state_address {
+          color: var(--black);
+          font-family: 16px;
+          line-height: 22px;
+          font-weight: 600;
+        }
+        .state_description {
+          color: var(--black);
+          font-family: 14px;
+          font-weight: 400;
+          line-height: 22px;
+          margin-bottom: 31px;
+        }
+        .form_input {
+          margin-bottom: 25px;
         }
       }
 
       .form_wrap {
         .phoneInput {
           display: flex;
-          gap: 35px;
+          gap: 10px;
           align-items: center;
 
+          .country_flag {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 13px 15px;
+            border: 1px solid #00000033;
+            border-radius: 8px;
+            .country_code {
+              font-size: 18px;
+              line-height: 22px;
+              font-weight: 600;
+            }
+          }
           .select_wrap {
             position: relative;
             display: flex;
             align-items: center;
             border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: 6px;
-            padding-left: 15px;
-
-            .country_flag {
-              display: flex;
-              align-items: center;
-              gap: 15px;
-            }
-            .country_code {
-              width: 38px;
-              padding: 6px 16px 6px 0;
-              font-size: 18px;
-              line-height: 22px;
-              border-radius: 0;
-              font-weight: 600;
-              border: none;
-              appearance: none;
-              margin: 0;
-              border-right: 1px solid rgba(0, 0, 0, 0.2);
-              &:focus {
-                outline: none;
-              }
-            }
+            min-width: 500px;
             select,
             input[type="tel"] {
               flex: 1;
@@ -368,7 +432,7 @@
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 58px;
-          align-items: flex-end;
+          align-items: flex-start;
 
           label {
             display: flex;
@@ -429,8 +493,8 @@
         border: none;
         border-radius: 8px;
         cursor: pointer;
-        margin-top: 99px;
-        margin-bottom: 100px;
+        margin-top: 120px;
+        margin-bottom: 17px;
         margin-left: auto;
         display: block;
         font-family: "Source Sans 3", sans-serif;
